@@ -1,8 +1,7 @@
 {
   "enablePullDownRefresh": true,
   "usingComponents": {
-    "hr-wave": "../../components/wave/wave",
-    "hr-search": "../../components/search/search"
+    "hr-wave": "../../components/wave/wave"
   },
   "backgroundTextStyle": "dark"
 }

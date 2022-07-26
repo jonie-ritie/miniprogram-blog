@@ -25,14 +25,14 @@ Page({
     // 轮播
     indicatorDots: true, //是否显示圆点
     autoplay: true, //是否自动滚动
-    interval: 3000, //轮播时间
-    duration: 500,
+    interval: 5000, //轮播时间
+    duration: 1000,
     indicator_color: "rgba(217, 217, 217, 1)", //指示点颜色
     indicator_active_color: "#3F91F0", //指示点选中颜色
   },
   onShareAppMessage: function () {
     return {
-      title: `你必须非常努力,才能看起来毫不费力."---${webSiteName}"`,
+      title: `Arts of love & persistence`,
       path: 'pages/index/index',
       success: function (res) {
         // 转发成功
@@ -44,7 +44,7 @@ Page({
   },
   onShareTimeline() {
     return {
-      title: `你必须非常努力,才能看起来毫不费力."---${webSiteName}"`,
+      title: `Arts of love & persistence`,
       imageUrl: '../../static/images/logo-icon.png'
     }
   },
