@@ -71,13 +71,13 @@ button::after {
 }
 .login_w {
   width: 600rpx;
+  height: auto;
   position: absolute;
-  top: calc(50% - 400rpx);
+  top: calc(50% - 100rpx);
   left: calc(50% - 300rpx);
   background-color: #fff;
   box-shadow: 0 0 20rpx var(--shadowColor);
   border-radius: 20rpx;
-  height: 800rpx;
   z-index: 1;
 }
 .mask_w {
@@ -94,8 +94,7 @@ button::after {
   width: 90%;
   margin: 0 auto;
   height: 480rpx;
-  background-color: #fff;
-  background: url(https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/api/beijings.png) no-repeat;
+  /* background: url(https://statics.888ppt.com/Upload/imgs/0f667aca864b5924/1.jpg!800) no-repeat; */
   background-size: 100% 100%;
 }
 .img_w {
