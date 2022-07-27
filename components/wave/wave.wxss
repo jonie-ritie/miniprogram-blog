@@ -7,13 +7,14 @@ height:0px; position: relative;
 }
  
 .water {
-position: absolute;
-left: 0;
-bottom: -10px;
-height: 40px;
-width: 100%;
-margin-bottom: 30px;
-z-index: 1
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 30px;
+  z-index: 1;
 }
  
 .water-c {
@@ -39,7 +40,7 @@ animation: wave-animation-2 6s infinite linear
 .water-2 {
 position: absolute;
 width: 100%;
-height: 60px
+height: 30px
 }
  
 .back-white {

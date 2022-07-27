@@ -28,7 +28,7 @@ Page({
     interval: 5000, //轮播时间
     duration: 1000,
     indicator_color: "rgba(217, 217, 217, 1)", //指示点颜色
-    indicator_active_color: "#3F91F0", //指示点选中颜色
+    indicator_active_color: "#ffc0cb", //指示点选中颜色
   },
   onShareAppMessage: function () {
     return {

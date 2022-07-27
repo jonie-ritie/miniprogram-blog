@@ -41,7 +41,7 @@
   -webkit-line-clamp: 2;
 }
 .cnet-img-w {
-  height: 320rpx;
+  height: 336rpx;
   border-top-left-radius: 20rpx;
   border-top-right-radius: 20rpx;
   overflow: hidden;
@@ -99,7 +99,7 @@
 }
 /* 轮播 */
 .uni-margin-wrap {
-  width: 690rpx;
+  width: auto;
   margin: 0 30rpx;
   border-radius: 20rpx;
   margin-top: 20rpx;
