@@ -1441,7 +1441,7 @@
 @keyframes zoomIn {
   from {
     opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.8, 0.8, 0.8);
   }
 
   50% {
@@ -1638,7 +1638,7 @@
 
 @keyframes slideInDown {
   from {
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -10%, 0);
     visibility: visible;
   }
 
@@ -1655,7 +1655,7 @@
 
 @keyframes slideInLeft {
   from {
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-10%, 0, 0);
     visibility: visible;
   }
 
@@ -1689,7 +1689,7 @@
 
 @keyframes slideInUp {
   from {
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 15%, 0);
     visibility: visible;
   }
 
