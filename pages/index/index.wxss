@@ -32,7 +32,8 @@
 }
 .cent-wz-h {
   margin: 14rpx 28rpx;
-  font-size: 30rpx;
+  padding-top: 8rpx;
+  font-size: 32rpx;
   font-weight: 600;
   overflow: hidden;
   text-overflow: ellipsis;
