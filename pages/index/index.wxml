@@ -10,6 +10,9 @@
 	<text>了解"{{webSiteName}}"最新文章</text>
 </view>
 <view>
+  <view class="goTop" hidden='{{!floorstatus}}' bindtap="goTop">
+    <image src='../../static/icon/index/btt.png'></image>
+  </view>
 	<!-- 轮播图 -->
 	<view style="display:{{displaySwiper}}">
 		<view class="uni-margin-wrap">

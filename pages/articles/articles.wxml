@@ -1,6 +1,9 @@
 <wxs src="../../template/dates.wxs" module="tools"></wxs>
 <block wx:if="{{isLoding}}">
   <view class="articles_wrap">
+    <view class="goTop" hidden='{{!floorstatus}}' bindtap="goTop">
+      <image src='../../static/icon/index/btt.png'></image>
+    </view>
     <view class="hd_wrap">
       <view class="title_w">{{htmlText.title}}</view>
       <view class="ic">
@@ -18,11 +21,11 @@
       </view>
     </view>
     <mp-html content="{{htmlText.content}}" preview-img />
-    <!-- <view class="footer_copyright">
-      <view class="item_f"><text>文章作者:</text>{{author_d.name}}</view>
-      <view class="item_f"><text>文章链接:</text><text class="nav_a" bindtap="Nav_a" data-con="1">{{"https://"+author_d.domain}}</text></view>
-      <view class="item_f"><text>版权声明:</text>本博客所有文章除特别声明外，均采用 <text class="nav_a" bindtap="Nav_a" data-con="2">CC BY-NC-SA 4.0</text> 许可协议。转载请注明来自{{author_d.webname}}</view>
-    </view> -->
+    <view class="footer_copyright">
+      <view class="item_f"><text>文章作者: </text>{{author_d.name}}</view>
+      <view class="item_f"><text>原文链接: </text><text class="nav_a" bindtap="Nav_a" data-con="1">{{"https://"+author_d.domain}}</text></view>
+      <!-- <view class="item_f"><text>版权声明:</text>本博客所有文章除特别声明外，均采用 <text class="nav_a" bindtap="Nav_a" data-con="2">CC BY-NC-SA 4.0</text> 许可协议。转载请注明来自{{author_d.webname}}</view> -->
+    </view>
   </view>
 </block>
 <block wx:else>

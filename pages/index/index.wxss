@@ -234,3 +234,30 @@
   color: var(--SubtitleColor);
   text-align: center;
 }
+
+/* 返回顶部 */
+.goTop{
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  bottom: 40rpx;
+  background: rgba(0,0,0,.3);
+  right: 40rpx;
+  border-radius: 50%;
+  z-index: 9;
+}
+.goTop image {
+  position: relative;
+  height: 45rpx;
+  width: 45rpx;
+  margin: 18rpx;
+  margin-top: 14rpx;
+  font-size: 19px;
+  transition: all 0.3s ease;
+}
+.goTop:hover {
+  background: rgba(0,0,0,0.9);
+}
+.goTop:hover image {
+  margin-top: 6rpx;
+}
