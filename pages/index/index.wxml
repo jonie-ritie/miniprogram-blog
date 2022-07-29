@@ -113,7 +113,7 @@
 		</view>
 		<!-- 无更多文章提示 -->
 		<view class="loadingmore" style="display:{{floatDisplay}}">
-			<view class="no-more" hidden="{{!isLastPage}}">- 无更多文章 -</view>
+			<view class="no-more" hidden="{{!isLastPage}}">~ 到底啦 ~</view>
 		</view>
 	</view>
 	<!-- 无法访问网络 -->

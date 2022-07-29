@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/main/main",
-    "pages/articles/articles"
+    "pages/articles/articles",
+    "pages/archive/archive"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,6 +22,12 @@
         "iconPath": "static/icon/tabar/home.png",
         "selectedIconPath": "static/icon/tabar/home_h.png",
         "text": "首页"
+      },
+      {
+        "pagePath": "pages/archive/archive",
+        "iconPath": "static/icon/tabar/archive.png",
+        "selectedIconPath": "static/icon/tabar/archive_h.png",
+        "text": "归档"
       },
       {
         "pagePath": "pages/main/main",

@@ -1,0 +1,46 @@
+<!--
+ * @Description: 归档
+-->
+
+<import src="../../template/loading.wxml" />
+<wxs src="../../template/dates.wxs" module="tools"></wxs>
+<view>
+  <view class="goTop" hidden='{{!floorstatus}}' bindtap="goTop">
+    <image src='../../static/icon/index/btt.png'></image>
+  </view>
+
+  <!-- 标题 -->
+	<view class="archive-title">
+		<font v>归档</font>
+		<!-- <font class="archive-title-all">全部</font> -->
+	</view>
+
+  <!-- 文章列表 -->
+	<view tyle="display:{{showallDisplay}}">
+		<view wx:for="{{postsList}}" wx:for-item="item" wx:for-index="index" wx:key="item" style="animation:slideInUp {{index/10<1?0.4+.1*index:0.4+.01*index}}s linear">
+			<view class="archive-container" index="{{index}}" id="{{item.id}}" bindtap="redictAppDetail" data-url="{{item.slug}}" style='opacity:{{index >= (page-1)*2?op:"1"}};transition:all {{index >= (page-1)*2?(index-(page-1)*2)*0.5+0.5:"0"}}s;'>
+        <view class="archive-item">
+          <view class="archive-item-date">{{tools.timeChange(item.date)}}</view>
+          <view class="archive-item-title">{{item.title}}</view>
+        </view>
+        <view class="archive-item-category">{{item.categories[0].name}}</view>
+      </view>
+    </view>
+
+    <view style='display:{{isLoading?"block":"none"}}'>
+			<template is="tempLoading" />
+    </view>
+      <!-- 无更多文章提示 -->
+    <view class="loadingmore" style="display:{{floatDisplay}}">
+      <view class="no-more" hidden="{{!isLastPage}}">~ 到底啦 ~</view>
+    </view>
+  </view>
+
+	<!-- 无法访问网络 -->
+	<view class="showerror" style="display:{{showerror}}">
+		<image src="../../static/images/cry80.png" style="height:100rpx;width:100rpx"></image>
+		<view class="errortext">
+			暂时无法访问网络，下拉重试...
+		</view>
+	</view>
+</view>
