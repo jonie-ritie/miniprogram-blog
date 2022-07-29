@@ -51,12 +51,13 @@
   position: relative;
   border-radius: 20rpx;
   border: 1px var(--themeLightColor) solid;
-  box-shadow: -3rpx 0rpx 10rpx var(--shadowColor);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -25px;
 }
 .cent-dw .cate_meta {
   position: absolute;
   padding: 8rpx 20rpx;
   background: #fff;
+  line-height: 40rpx;
   border-radius: 14rpx;
   font-size: 25rpx;
   margin-right: 24rpx;
@@ -64,7 +65,7 @@
   color: #000;
   top: 24rpx;
   right: 0;
-  box-shadow: 0 0 10rpx rgba(204, 204, 204, 0.377);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .cent-div {
   margin-top: 50rpx;
@@ -154,7 +155,7 @@
 }
 /* 引导添加到我的小程序 */
 .addMyMiniapp {
-  color: var(--themeLightColor);
+  color: var(--titleColor);
   line-height: 1.2;
   background: var(--firstwordColor);
   padding: 24rpx 24rpx;
@@ -230,7 +231,7 @@
 }
 .loadingmore,
 .showerror {
-  margin: 20rpx 0;
+  margin: 40rpx 0;
   color: var(--SubtitleColor);
   text-align: center;
 }
@@ -243,7 +244,7 @@
   bottom: 40rpx;
   background: rgba(0,0,0,.3);
   right: 40rpx;
-  border-radius: 50%;
+  border-radius: 30%;
   z-index: 9;
 }
 .goTop image {

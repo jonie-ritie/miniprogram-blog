@@ -24,19 +24,21 @@ page {
 }
 .login-h {
   text-align: center;
-  margin: 20rpx 0rpx;
+  margin: 40rpx 0rpx;
+  font-size: larger;
   font-weight: bold;
   /* font-size: 36rpx; */
 }
 .login-bt {
   background-color: var(--firstwordColor);
-  border-radius: 100rpx;
+  border-radius: 20rpx;
   width: 70%;
   height: 80rpx;
   color: var(--themeLightColor);
   font-size: 34rpx;
   border: var(--firstwordColor) 1px solid;
   margin-top: 60rpx;
+  margin-bottom: 20rpx;
 }
 .login-bt2 {
   background-color: var(--themeLightColor);
@@ -51,7 +53,7 @@ button::after {
 .login-h-t {
   text-align: center;
   color: #413e3e;
-  font-size: 24rpx;
+  font-size: small;
   margin: 20rpx 0rpx;
   width: 80%;
   margin-left: 10%;
@@ -92,10 +94,10 @@ button::after {
 .hd_w {
   position: relative;
   width: 90%;
-  margin: 0 auto;
+  margin: 60rpx auto;
   height: 480rpx;
-  /* background: url(https://statics.888ppt.com/Upload/imgs/0f667aca864b5924/1.jpg!800) no-repeat; */
-  background-size: 100% 100%;
+  background: url(https://ritie-jonie-1312559530.cos.ap-nanjing.myqcloud.com/miniprogram/main-background-present.png) no-repeat;
+  background-position: center;
 }
 .img_w {
   position: absolute;
@@ -115,7 +117,7 @@ button::after {
   flex: 2;
 }
 .img_w .img_w_1 image {
-  border-radius: 50%;
+  border-radius: 20%;
   width: 75%;
 }
 .img_w .Nickname {
@@ -201,7 +203,7 @@ button::after {
 }
 .function_w .item_f .title_w {
   flex: 5;
-  font-size: 30rpx;
+  font-size: 35rpx;
   line-height: 132rpx;
 }
 .item_f {

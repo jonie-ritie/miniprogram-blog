@@ -105,7 +105,7 @@ page {
   bottom: 40rpx;
   background: rgba(0,0,0,.3);
   right: 40rpx;
-  border-radius: 50%;
+  border-radius: 30%;
   z-index: 9;
 }
 .goTop image {

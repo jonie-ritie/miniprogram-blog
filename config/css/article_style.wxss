@@ -107,6 +107,6 @@ page {
 ._h3 text {
   font-size: 30rpx;
   color: var(--articleThemeColor);
-  padding-left: 15rpx;
-  border-left: 8rpx solid var(--articleThemeColor);
+  /* padding-left: 15rpx; */
+  /* border-left: 8rpx solid var(--articleThemeColor); */
 }
