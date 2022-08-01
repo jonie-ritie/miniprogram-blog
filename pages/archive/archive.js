@@ -17,6 +17,7 @@ Page({
     webSiteName: webSiteName,  // 网站的名称
     isLoading: false,
     isAd: ad,
+    itemBackground: "rgba(0,0,0,0)",
   },
 
   /**
@@ -25,6 +26,10 @@ Page({
   onLoad(options) {
     let self = this;
     self.fetchPostsData();
+  },
+
+  onTouchMove: function (e) {
+    
   },
 
   // 跳转至查看小程序列表页面或文章详情页
@@ -156,7 +161,7 @@ Page({
 
   // 获取滚动条当前位置
   onPageScroll: function (e) {
-    console.log(e)
+    // console.log(e)
     if (e.scrollTop > 200) {
       this.setData({
         floorstatus: true

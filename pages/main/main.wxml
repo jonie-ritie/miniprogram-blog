@@ -7,7 +7,7 @@
       </view>
       <view class="Nickname" style="font-weight: bold;">{{isLogin?hasUserInfo.nickName:"未登录"}}<view class="title_w_1" style="font-weight: bold;">月明千里照平沙</view>
       </view>
-      <view class="btn_u">
+      <view class="btn_u" hover-class="btn_u_hover" hover-start-time="5" hover-stay-time="200">
         <button style="width:100%;height:80rpx;border-radius:20rpx;background-color:#ffc0cb;"
           bindtap="getUserProfile">{{!isLogin?'未登录':'更新'}}</button>
       </view>
@@ -27,12 +27,12 @@
   </view> -->
   <!-- 底部设计开始 -->
   <view class="function_w">
-    <view class="item_f">
+    <view class="item_f" hover-class="item_f_hover" hover-start-time="5" hover-stay-time="200">
       <view class="icon_i"><image class="" src="../../static/icon/main/kf.png" mode="widthFix" style="width:40%;"></image></view>
       <view class="title_w">联系我们</view>
       <button class="contact" open-type="contact"></button>
     </view>
-    <view class="item_f">
+    <view class="item_f" hover-class="item_f_hover" hover-start-time="5" hover-stay-time="200">
       <button class="feed" open-type="feedback"></button>
       <view class="icon_i"><image class="" src="../../static/icon/main/fk.png" mode="widthFix" style="width:40%;"></image></view>
       <view class="title_w">问题反馈</view>
@@ -41,7 +41,7 @@
       <view class="icon_i"><image class="" src="../../static/icon/main/ab.png" mode="widthFix"></image></view>
       <view class="title_w">关于程序</view>
     </view> -->
-    <view class="item_f" bindtap="closeF">
+    <view class="item_f" bindtap="closeF" hover-class="item_f_hover" hover-start-time="5" hover-stay-time="200">
       <view class="icon_i"><image class="" src="../../static/icon/main/gb.png" mode="widthFix" style="width:40%;"></image></view>
       <view class="title_w">退出登录</view>
     </view>
@@ -62,7 +62,7 @@
     <view class="login-h-t">
       如果无法登录，请“清除缓存”后再登录
     </view>
-    <button class="login-bt" bindtap="getUserProfile">授权登录</button>
-    <button class="login-bt2" bindtap="closeLoginPopup">取消</button>
+    <button class="login-bt" bindtap="getUserProfile" hover-class="login-bt_hover" hover-start-time="5" hover-stay-time="50">授权登录</button>
+    <button class="login-bt2" bindtap="closeLoginPopup" hover-class="login-bt2_hover" hover-start-time="5" hover-stay-time="50">取消</button>
   </view>
 </block>
