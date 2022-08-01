@@ -18,7 +18,7 @@
   <!-- 文章列表 -->
 	<view tyle="display:{{showallDisplay}}">
 		<view wx:for="{{postsList}}" wx:for-item="item" wx:for-index="index" wx:key="item" style="animation:slideInUp {{index/10<1?0.4+.1*index:0.4+.01*index}}s linear">
-			<view class="archive-container" index="{{index}}" id="{{item.id}}" bindtap="redictAppDetail" data-url="{{item.slug}}" style='opacity:{{index >= (page-1)*2?op:"1"}};' hover-class="archive-container_hover" hover-start-time="50" bindtouchmove="onTouchMove">
+			<view class="archive-container" index="{{index}}" id="{{item.id}}" bindtap="redictAppDetail" data-url="{{item.slug}}" style='opacity:{{index >= (page-1)*2?op:"1"}};' hover-class="archive-container_hover" hover-start-time="50">
         <view class="archive-item">
           <view class="archive-item-date">{{tools.timeChange(item.date)}}</view>
           <view class="archive-item-title">{{item.title}}</view>

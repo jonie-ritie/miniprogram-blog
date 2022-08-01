@@ -28,10 +28,6 @@ Page({
     self.fetchPostsData();
   },
 
-  onTouchMove: function (e) {
-    
-  },
-
   // 跳转至查看小程序列表页面或文章详情页
   redictAppDetail: function (e) {
     // console.log(e);
