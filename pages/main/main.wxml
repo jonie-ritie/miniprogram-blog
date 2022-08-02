@@ -8,8 +8,7 @@
       <view class="Nickname" style="font-weight: bold;">{{isLogin?hasUserInfo.nickName:"未登录"}}<view class="title_w_1" style="font-weight: bold;">月明千里照平沙</view>
       </view>
       <view class="btn_u" hover-class="btn_u_hover" hover-start-time="5" hover-stay-time="200">
-        <button style="width:100%;height:80rpx;border-radius:20rpx;background-color:#ffc0cb;"
-          bindtap="getUserProfile">{{!isLogin?'未登录':'更新'}}</button>
+        <view class="btn_u_title" bindtap="getUserProfile">{{!isLogin?'未登录':'更新'}}</view>
       </view>
     </view>
   </view>
@@ -41,10 +40,6 @@
       <view class="icon_i"><image class="" src="../../static/icon/main/ab.png" mode="widthFix"></image></view>
       <view class="title_w">关于程序</view>
     </view> -->
-    <!-- <view class="item_f" bindtap="closeF" hover-class="item_f_hover" hover-start-time="5" hover-stay-time="200">
-      <view class="icon_i"><image class="" src="../../static/icon/main/gb.png" mode="widthFix" style="width:40%;"></image></view>
-      <view class="title_w">退出登录</view>
-    </view> -->
   </view>
   <view class="contact_w">
     <view class="contact_item" hover-class="contact_item_hover" hover-start-time="5" hover-stay-time="200" bindtap="copyText" data-text="https://blog.ritie-jonie.xyz">
@@ -64,13 +59,15 @@
       <view class="contact_link">电子邮件</view>
     </view>
   </view>
-  <view class="exit_btn" bindtap="closeF" hover-class="item_f_hover" hover-start-time="5" hover-stay-time="200">
-    <view class="exit_title">退出登录</view>
-  </view>
+  <block wx:if="{{hasUserInfo}}">
+    <view class="exit_btn" bindtap="closeF" hover-class="item_f_hover" hover-start-time="5" hover-stay-time="200">
+      <view class="exit_title">退出登录</view>
+    </view>
+  </block>
 </view>
 
 
-<block wx:if="{{!hasUserInfo}}">
+<block wx:if="{{!closeLoginBlock}}">
   <!-- 遮罩层 -->
   <view class="mask_w" bindtap="closeLoginPopup"></view>
   <view class="login_w">

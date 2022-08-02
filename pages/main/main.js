@@ -14,7 +14,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hasUserInfo: false
+    hasUserInfo: false,
+    closeLoginBlock: false,
+    isLogin: false,
   },
 
   /**
@@ -32,7 +34,8 @@ Page({
         wx.setStorageSync("userInfo", res.userInfo);
         this.setData({
           hasUserInfo: res.userInfo,
-          isLogin: true
+          isLogin: true,
+          closeLoginBlock: true,
         })
         wx.showToast({
           title: '更新成功',
@@ -44,7 +47,7 @@ Page({
   },
   closeLoginPopup() {
     this.setData({
-      hasUserInfo: !this.data.hasUserInfo
+      closeLoginBlock: !this.data.closeLoginBlock
     })
   },
   // 退出登录
@@ -77,12 +80,14 @@ Page({
     if (!userInfo) {
       this.setData({
         hasUserInfo: false,
-        isLogin: false
+        closeLoginBlock: false,
+        isLogin: false,
       })
     } else {
       this.setData({
         hasUserInfo: userInfo,
-        isLogin: true
+        closeLoginBlock: true,
+        isLogin: true,
       })
     }
   },
