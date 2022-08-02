@@ -1,12 +1,11 @@
 /* pages/archive/archive.wxss */
 
 .archive-title-all {
-  color: #000;
-  font-size: 400;
-  font-size: 28rpx;
+  color: #fff;
+  font-size: 32rpx;
   margin-left: 16rpx;
   margin-right: 16rpx;
-  padding: 8rpx;
+  padding: 12rpx;
   border-radius: 8rpx;
   background-color: #ffc0cb;
   transition: all 0.2s ease;

@@ -8,7 +8,7 @@
       <view class="Nickname" style="font-weight: bold;">{{isLogin?hasUserInfo.nickName:"未登录"}}<view class="title_w_1" style="font-weight: bold;">月明千里照平沙</view>
       </view>
       <view class="btn_u" hover-class="btn_u_hover" hover-start-time="5" hover-stay-time="200">
-        <view class="btn_u_title" bindtap="getUserProfile">{{!isLogin?'未登录':'更新'}}</view>
+        <view class="btn_u_title" bindtap="getUserProfile">{{!isLogin?'登录':'更新'}}</view>
       </view>
     </view>
   </view>
@@ -69,8 +69,8 @@
 
 <block wx:if="{{!closeLoginBlock}}">
   <!-- 遮罩层 -->
-  <view class="mask_w" bindtap="closeLoginPopup"></view>
-  <view class="login_w">
+  <view class="mask_w" bindtap="closeLoginPopup" catchtouchmove="return"></view>
+  <view class="login_w" catchtouchmove="return">
     <!-- <view class="login-fr">
       <image mode="widthFix" class="login-img" src="../../static/images/login.png"></image>
     </view> -->

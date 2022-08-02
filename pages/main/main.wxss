@@ -94,7 +94,7 @@ button::after {
   z-index: 1;
 }
 .mask_w {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -263,6 +263,7 @@ button::after {
   width: 700rpx;
   height: auto;
   margin: 36rpx auto;
+  margin-top: 48rpx;
   background-color: #fff;
   border-radius: 20rpx;
   padding: 20rpx;
@@ -271,6 +272,8 @@ button::after {
   position: relative;
   display: flex;
   transition: all 0.2s linear;
+  align-items: center;
+  justify-content: center;
 }
 .contact_w .contact_item_hover {
   background: rgba(0, 0, 0, 0.05);

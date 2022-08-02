@@ -156,7 +156,7 @@
 }
 /* 引导添加到我的小程序 */
 .addMyMiniapp {
-  color: var(--titleColor);
+  color: white;
   line-height: 1.2;
   background: var(--firstwordColor);
   padding: 24rpx 24rpx;
