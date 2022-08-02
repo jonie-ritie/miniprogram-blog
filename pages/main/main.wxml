@@ -29,7 +29,7 @@
   <view class="function_w">
     <view class="item_f" hover-class="item_f_hover" hover-start-time="5" hover-stay-time="200">
       <view class="icon_i"><image class="" src="../../static/icon/main/kf.png" mode="widthFix" style="width:40%;"></image></view>
-      <view class="title_w">联系我们</view>
+      <view class="title_w">客服会话</view>
       <button class="contact" open-type="contact"></button>
     </view>
     <view class="item_f" hover-class="item_f_hover" hover-start-time="5" hover-stay-time="200">
@@ -41,10 +41,31 @@
       <view class="icon_i"><image class="" src="../../static/icon/main/ab.png" mode="widthFix"></image></view>
       <view class="title_w">关于程序</view>
     </view> -->
-    <view class="item_f" bindtap="closeF" hover-class="item_f_hover" hover-start-time="5" hover-stay-time="200">
+    <!-- <view class="item_f" bindtap="closeF" hover-class="item_f_hover" hover-start-time="5" hover-stay-time="200">
       <view class="icon_i"><image class="" src="../../static/icon/main/gb.png" mode="widthFix" style="width:40%;"></image></view>
       <view class="title_w">退出登录</view>
+    </view> -->
+  </view>
+  <view class="contact_w">
+    <view class="contact_item" hover-class="contact_item_hover" hover-start-time="5" hover-stay-time="200" bindtap="copyText" data-text="https://blog.ritie-jonie.xyz">
+      <view class="contact_icon"><image class="" src="../../static/icon/main/web-mark-dark.png" mode="widthFix"></image></view>
+      <view class="contact_link">博客官网</view>
     </view>
+    <view class="contact_item" hover-class="contact_item_hover" hover-start-time="5" hover-stay-time="200" bindtap="copyText" data-text="https://github.com/jonie-ritie">
+      <view class="contact_icon"><image class="" src="../../static/icon/main/github-mark-dark.png" mode="widthFix"></image></view>
+      <view class="contact_link">Github</view>
+    </view>
+    <view class="contact_item" hover-class="contact_item_hover" hover-start-time="5" hover-stay-time="200" bindtap="copyText" data-text="472241802">
+      <view class="contact_icon"><image class="" src="../../static/icon/main/qq-mark-dark.png" mode="widthFix"></image></view>
+      <view class="contact_link">QQ 群</view>
+    </view>
+    <view class="contact_item" hover-class="contact_item_hover" hover-start-time="5" hover-stay-time="200" bindtap="copyText" data-text="2465373218@qq.com">
+      <view class="contact_icon"><image class="" src="../../static/icon/main/email-mark-dark.png" mode="widthFix"></image></view>
+      <view class="contact_link">电子邮件</view>
+    </view>
+  </view>
+  <view class="exit_btn" bindtap="closeF" hover-class="item_f_hover" hover-start-time="5" hover-stay-time="200">
+    <view class="exit_title">退出登录</view>
   </view>
 </view>
 

@@ -180,6 +180,18 @@ button::after {
   font-size: 25rpx;
   font-weight: 500;
 }
+.mid_item {
+  position: relative;
+}
+.mid_item .contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
 .function_w {
   width: 700rpx;
   height: auto;
@@ -219,7 +231,7 @@ button::after {
 }
 .function_w .item_f .title_w {
   flex: 5;
-  font-size: 35rpx;
+  font-size: 36rpx;
   line-height: 132rpx;
 }
 .item_f {
@@ -233,15 +245,47 @@ button::after {
   opacity: 0;
   z-index: 1;
 }
-.mid_item {
-  position: relative;
+.contact_w {
+  width: 700rpx;
+  height: auto;
+  margin: 36rpx auto;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
 }
-.mid_item .contact {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 1;
+.contact_w .contact_item {
+  position: relative;
+  display: flex;
+  transition: all 0.2s linear;
+}
+.contact_w .contact_item_hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.contact_w .contact_item .contact_icon {
+  flex: 1;
+  height: 132rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact_w .contact_item .contact_icon image {
+  width: 40%;
+}
+.contact_w .contact_item .contact_link {
+  flex: 5;
+  font-size: 36rpx;
+  line-height: 132rpx;
+}
+.exit_btn {
+  display: flex;
+  width: 240rpx;
+  margin: 56rpx auto;
+  padding: 20rpx;
+  justify-content: center;
+  background-color: #ffc0cb;
+  color: white;
+  border-radius: 20rpx;
+}
+.exit_title {
+  font-size: 36rpx;
 }
