@@ -17,7 +17,7 @@ Page({
     webSiteName: webSiteName,  // 网站的名称
     isLoading: false,
     isAd: ad,
-    itemBackground: "rgba(0,0,0,0)",
+    sortMethod: "↓ 最新"
   },
 
   /**
@@ -26,6 +26,29 @@ Page({
   onLoad(options) {
     let self = this;
     self.fetchPostsData();
+  },
+
+  changeSortMethod: function (e) {
+    if (this.data.postsList){
+      if (this.data.sortMethod == "↓ 最早") {
+        this.setData({sortMethod: "↓ 最新"});
+        this.data.postsList.sort((m, n) => {
+          if (m.date > n.date) return -1;
+          else if (m.date < n.date) return 1;
+          else return 0;
+        });
+      } else if (this.data.sortMethod == "↓ 最新") {
+        this.setData({sortMethod: "↓ 最早"});
+        this.data.postsList.sort((m, n) => {
+          if (m.date > n.date) return 1;
+          else if (m.date < n.date) return -1;
+          else return 0;
+        });
+      }
+      this.setData({
+        postsList: this.data.postsList,
+      });
+    }
   },
 
   // 跳转至查看小程序列表页面或文章详情页
@@ -54,7 +77,7 @@ Page({
           this.setData({
             pageCounts: res.data.pageCount,
             postsList: [...this.data.postsList, ...res.data.data]
-          })
+          });
         } else {
           console.log('最后一页');
         }

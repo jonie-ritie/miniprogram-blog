@@ -12,11 +12,11 @@
   <!-- 标题 -->
 	<view class="archive-title">
 		<font v>归档</font>
-		<!-- <font class="archive-title-all">全部</font> -->
+		<view class="archive-title-all" bindtap="changeSortMethod" hover-class="archive-title-all_hover">{{sortMethod}}</view>
 	</view>
 
   <!-- 文章列表 -->
-	<view tyle="display:{{showallDisplay}}">
+	<view style="display:{{showallDisplay}}">
 		<view wx:for="{{postsList}}" wx:for-item="item" wx:for-index="index" wx:key="item" style="animation:slideInUp {{index/10<1?0.4+.1*index:0.4+.01*index}}s linear">
 			<view class="archive-container" index="{{index}}" id="{{item.id}}" bindtap="redictAppDetail" data-url="{{item.slug}}" style='opacity:{{index >= (page-1)*2?op:"1"}};' hover-class="archive-container_hover" hover-start-time="50">
         <view class="archive-item">
