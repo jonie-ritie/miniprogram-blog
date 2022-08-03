@@ -19,7 +19,7 @@ page {
 	/* 定义主题颜色 */
 	--themeColor: #000;
 	--articleThemeColor: #000; /* 文章主题色 */
-	--articeTag: #ccc;  /* 文章标签色 */
+	--articeTag: #ffc0cb;  /* 文章标签色 */
 	--themeLightColor: #fff;
 	--themeDarkColor: #000;
 	--titleColor: #333;

@@ -27,7 +27,7 @@ Page({
     autoplay: true, //是否自动滚动
     interval: 4000, //轮播时间
     duration: 750,
-    indicator_color: "rgba(217, 217, 217, 1)", //指示点颜色
+    indicator_color: "rgba(217, 217, 217, 0.3)", //指示点颜色
     indicator_active_color: "#ffc0cb", //指示点选中颜色
   },
   onShareAppMessage: function () {

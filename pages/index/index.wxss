@@ -110,6 +110,10 @@
 .swiper {
   height: 400rpx;
 }
+.swiper .wx-swiper-dot {
+  width: 56rpx;
+  border-radius: 8rpx;
+}
 .swiper-item {
   display: block;
   height: 340rpx;
@@ -117,6 +121,7 @@
   overflow: hidden;
   /* box-shadow:0px 5px 15px rgba(0,0,0,0.16); */
   position: relative;
+  margin: auto 8rpx;
 }
 .fr-swiper-img {
   width: 100%;

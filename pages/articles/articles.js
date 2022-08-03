@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isLoding: false,
+    isLoaded: false,
     htmlText: '',
     author_d: {}
   },
@@ -37,7 +37,7 @@ Page({
               domain: config.getDomain,
               webname: config.getWebsiteName
             },
-            isLoding: true
+            isLoaded: true
           })
         }
       })
@@ -107,7 +107,6 @@ Page({
   },
   // 获取滚动条当前位置
   onPageScroll: function (e) {
-    console.log(e)
     if (e.scrollTop > 200) {
       this.setData({
         floorstatus: true
