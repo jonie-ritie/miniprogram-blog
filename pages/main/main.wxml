@@ -7,9 +7,24 @@
       </view>
       <view class="Nickname" style="font-weight: bold;">{{isLogin?hasUserInfo.nickName:"未登录"}}<view class="title_w_1" style="font-weight: bold;">月明千里照平沙</view>
       </view>
-      <view class="btn_u" hover-class="btn_u_hover" hover-start-time="5" hover-stay-time="200">
-        <view class="btn_u_title" bindtap="getUserProfile">{{!isLogin?'登录':'更新'}}</view>
+      <view class="btn_u-layout">
+        <block wx:if="{{isLoaded}}">
+          <view class="btn_u" hover-class="btn_u_hover" hover-start-time="5" hover-stay-time="200">
+            <view class="btn_u_title" bindtap="getUserProfile">{{!isLogin?'登录':'更新'}}</view>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="btn_u-loading"></view>
+        </block>
       </view>
+    </view>
+  </view>
+  <view class="weather_w" style="top:{{weatherTop}}px;height:{{weatherHeight}}px;width:{{weatherWidth}}px;">
+    <view class="weather_w-img" style="height: {{weatherHeight}}px;width: {{weatherHeight}}px;">
+      <image src="{{weatherIcon}}"></image>
+    </view>
+    <view class="weather_w-temp">
+      {{temperature}}
     </view>
   </view>
   <!-- 中部设计开始 -->
@@ -80,7 +95,14 @@
     <view class="login-h-t">
       如果无法登录，请“清除缓存”后再登录
     </view>
-    <button class="login-bt" bindtap="getUserProfile" hover-class="login-bt_hover" hover-start-time="5" hover-stay-time="50">授权登录</button>
+    <view class="login-bt-layout">
+      <block wx:if="{{isLoaded}}">
+        <button class="login-bt" bindtap="getUserProfile" hover-class="login-bt_hover" hover-start-time="5" hover-stay-time="50">授权登录</button>
+      </block>
+      <block wx:else>
+        <view class="login-bt-loading"></view>
+      </block>
+    </view>
     <button class="login-bt2" bindtap="closeLoginPopup" hover-class="login-bt2_hover" hover-start-time="5" hover-stay-time="50">取消</button>
   </view>
 </block>

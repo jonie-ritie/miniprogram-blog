@@ -112,6 +112,7 @@
 }
 .swiper .wx-swiper-dot {
   width: 56rpx;
+  height: 12rpx;
   border-radius: 8rpx;
 }
 .swiper-item {

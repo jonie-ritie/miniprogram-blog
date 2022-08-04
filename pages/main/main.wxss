@@ -15,6 +15,45 @@ page {
 .main_w {
   padding-bottom: 1rpx;
 }
+.weather_w {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 8px;
+  width: 0;
+  height: 0;
+  margin-top: 16rpx;
+  background-color: var(--themeLightColor);
+  color: rgba(0, 0, 0, 0.7);
+  padding: 8rpx 16rpx;
+  border: 1px solid rgba(217,217,217,0.5);
+  border-radius: 56rpx;
+}
+.weather_w .weather_w-img {
+  flex: 4;
+  width: 0;
+  height: 0;
+}
+.weather_w .weather_w-img image{
+  height: 100%;
+}
+.weather_w picker {
+  flex: 7;
+  width: 100%;
+  height: 100%;
+  text-align: end;
+  font-size: 16px;
+}
+.weather_w .weather_w-temp {
+  flex: 7;
+  width: 100%;
+  height: 100%;
+  text-align: end;
+  font-size: 16px;
+}
 .login-fr {
   height: 300rpx;
   width: 300rpx;
@@ -32,20 +71,34 @@ page {
   font-weight: bold;
   /* font-size: 36rpx; */
 }
-.login-bt {
+.login-bt-layout {
+  display: flex;
+  width: 50%;
+  height: 80rpx;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60rpx;
+  margin-bottom: 20rpx;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.login-bt-layout .login-bt {
   background-color: var(--firstwordColor);
   border-radius: 20rpx;
-  width: 70%;
-  height: 80rpx;
   color: var(--themeLightColor);
   font-size: 34rpx;
   border: var(--firstwordColor) 1px solid;
-  margin-top: 60rpx;
-  margin-bottom: 20rpx;
   transition: all 0.2s ease;
 }
 .login-bt_hover {
   filter: brightness(0.9);
+}
+.login-bt-layout .login-bt-loading {
+  width: 160rpx;
+  height: 120rpx;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: rgb(241, 242, 243,0); display: block;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3E %3Crect x='14' y='35' width='12' height='30' fill='%23ffc0cb' rx='5px'%3E %3Canimate attributeName='opacity' dur='1s' repeatCount='indefinite' calcMode='spline' keyTimes='0;0.5;1' keySplines='0.5 0 0.5 1;0.5 0 0.5 1' values='1;0.2;1' begin='-0.6'%3E%3C/animate%3E %3C/rect%3E%3Crect x='34' y='35' width='12' height='30' fill='%23f7ddde' rx='5px'%3E %3Canimate attributeName='opacity' dur='1s' repeatCount='indefinite' calcMode='spline' keyTimes='0;0.5;1' keySplines='0.5 0 0.5 1;0.5 0 0.5 1' values='1;0.2;1' begin='-0.4'%3E%3C/animate%3E %3C/rect%3E%3Crect x='54' y='35' width='12' height='30' fill='%23fbe8e7' rx='5px'%3E %3Canimate attributeName='opacity' dur='1s' repeatCount='indefinite' calcMode='spline' keyTimes='0;0.5;1' keySplines='0.5 0 0.5 1;0.5 0 0.5 1' values='1;0.2;1' begin='-0.2'%3E%3C/animate%3E %3C/rect%3E%3Crect x='74' y='35' width='12' height='30' fill='%23fcf5ee' rx='5px'%3E %3Canimate attributeName='opacity' dur='1s' repeatCount='indefinite' calcMode='spline' keyTimes='0;0.5;1' keySplines='0.5 0 0.5 1;0.5 0 0.5 1' values='1;0.2;1' begin='-1'%3E%3C/animate%3E %3C/rect%3E %3C/svg%3E");
+  background-size: 100% 100%;
 }
 .login-bt2 {
   background-color: var(--themeLightColor);
@@ -143,10 +196,24 @@ button::after {
   color: #888;
   font-weight: unset;
 }
-.img_w .btn_u {
-  flex: 1;
+.img_w .btn_u-layout {
+  flex: 2;
   display: flex;
-  width: 120rpx;
+  width: 140rpx;
+  margin: auto;
+  transition: all 0.2s ease;
+  justify-content: center;
+  align-items: center;
+}
+.img_w .btn_u-layout .btn_u-loading {
+  width: 160rpx;
+  height: 120rpx;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: rgb(241, 242, 243,0); display: block;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3E %3Crect x='14' y='35' width='12' height='30' fill='%23ffc0cb' rx='5px'%3E %3Canimate attributeName='opacity' dur='1s' repeatCount='indefinite' calcMode='spline' keyTimes='0;0.5;1' keySplines='0.5 0 0.5 1;0.5 0 0.5 1' values='1;0.2;1' begin='-0.6'%3E%3C/animate%3E %3C/rect%3E%3Crect x='34' y='35' width='12' height='30' fill='%23f7ddde' rx='5px'%3E %3Canimate attributeName='opacity' dur='1s' repeatCount='indefinite' calcMode='spline' keyTimes='0;0.5;1' keySplines='0.5 0 0.5 1;0.5 0 0.5 1' values='1;0.2;1' begin='-0.4'%3E%3C/animate%3E %3C/rect%3E%3Crect x='54' y='35' width='12' height='30' fill='%23fbe8e7' rx='5px'%3E %3Canimate attributeName='opacity' dur='1s' repeatCount='indefinite' calcMode='spline' keyTimes='0;0.5;1' keySplines='0.5 0 0.5 1;0.5 0 0.5 1' values='1;0.2;1' begin='-0.2'%3E%3C/animate%3E %3C/rect%3E%3Crect x='74' y='35' width='12' height='30' fill='%23fcf5ee' rx='5px'%3E %3Canimate attributeName='opacity' dur='1s' repeatCount='indefinite' calcMode='spline' keyTimes='0;0.5;1' keySplines='0.5 0 0.5 1;0.5 0 0.5 1' values='1;0.2;1' begin='-1'%3E%3C/animate%3E %3C/rect%3E %3C/svg%3E");
+  background-size: 100% 100%;
+}
+.img_w .btn_u-layout .btn_u {
+  display: flex;
+  width: 140rpx;
   margin: auto;
   padding: 20rpx;
   justify-content: center;
@@ -155,13 +222,13 @@ button::after {
   border-radius: 20rpx;
   transition: all 0.2s ease;
 }
-.img_w .btn_u_title {
+.img_w .btn_u-layout .btn_u_title {
   font-size: 36rpx;
 }
-.img_w .btn_u_hover {
+.img_w .btn_u-layout .btn_u_hover {
   filter: brightness(0.9);
 }
-.img_w .btn_u button {
+.img_w .btn_u-layout .btn_u button {
   font-size: medium;
   font-weight: unset;
   color: #fff;

@@ -5,6 +5,14 @@
     "pages/articles/articles",
     "pages/archive/archive"
   ],
+  "requiredPrivateInfos": [
+    "getFuzzyLocation"
+  ],
+  "permission": {
+    "scope.userFuzzyLocation": {
+      "desc": "你的位置信息将用于获取天气情况"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

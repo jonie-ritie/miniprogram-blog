@@ -28,7 +28,8 @@ page {
 	--shadowColor: #ccc;
 	--hightNumDark: #212121;
 	--hightNumfont: rgba(238,255,255,0.5);
-	--codeColor: #eff;
+  --codeColor: #eff;
+  --weatherBorderColor: #ccc;
 	font-size: 32rpx;
 }
 
