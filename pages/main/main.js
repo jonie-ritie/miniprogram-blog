@@ -1,11 +1,6 @@
 /***
  * @Description: 个人主页的登录设计
- * @Author: Harry
- * @Date: 2021-09-04 16:25:15
- * @Url: https://u.mr90.top
- * @github: https://github.com/rr210
- * @LastEditTime: 2021-09-08 14:16:12
- * @LastEditors: Harry
+ * @Author: Jonas
  */
 // pages/main/main.js
 Page({
@@ -38,18 +33,20 @@ Page({
     
     //设置用户所在位置
     this.setUserLoc();
-
-    this.getSelectLoc();
   },
   setUserLoc: function(e) {
     var that = this;
     wx.getFuzzyLocation({
-      type: 'wgs84',
+      type: 'gcj02',
       success (res) {
         that.setData({
           latitude: res.latitude,
           longitude: res.longitude,
         })
+        console.log(that.data.longitude + "," + that.data.latitude);
+      },
+      complete () {
+        that.getSelectLoc();
       }
     })
   },
@@ -64,14 +61,15 @@ Page({
   getSelectLoc: function() {
     var that = this; //this不可以直接在wxAPI函数内部使用
     // 调用和风天气API获取位置ID
+    var loc = that.data.longitude.toString() + "," + that.data.latitude.toString();
     wx.request({
-      url: 'https://geoapi.heweather.net/v2/city/lookup?',
+      url: 'https://geoapi.qweather.net/v2/city/lookup?',
       data: {
-        location: that.data.longitude + "," + that.data.latitude,
+        location: loc,
         key: 'cdf6c29c017144a49986d73463f868ca'
       },
       success: function (res) {
-        console.log(res.data)
+        console.log(res.data.location[0].name)
         that.setData({ addrid: res.data.location[0].id })
       },
       complete: function () {
@@ -85,13 +83,13 @@ Page({
     var that = this; //this不可以直接在wxAPI函数内部使用 
     // 调用和风天气API获取天气信息
     wx.request({
-      url: 'https://devapi.heweather.net/v7/weather/now?',
+      url: 'https://devapi.qweather.com/v7/weather/now?',
       data: {
         location: that.data.addrid,
         key: 'cdf6c29c017144a49986d73463f868ca'
       },
       success: function (res) {
-        console.log(res.data)
+        // console.log(res.data)
         that.setData({ 
           temperature: res.data.now.temp + "°C",
           weatherIcon: "../../static/weather/" + res.data.now.icon + "-fill.svg",
