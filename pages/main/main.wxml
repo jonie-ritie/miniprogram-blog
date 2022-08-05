@@ -23,9 +23,9 @@
     <view class="weather_w-img" style="height: {{weatherHeight}}px;width: {{weatherHeight}}px;">
       <image src="{{weatherIcon}}"></image>
     </view>
-    <view class="weather_w-temp">
+    <picker mode="region" class="weather_w-temp" bindchange="getSelectLoc">
       {{temperature}}
-    </view>
+    </picker>
   </view>
   <!-- 中部设计开始 -->
   <!-- <view class="mid_w_share">

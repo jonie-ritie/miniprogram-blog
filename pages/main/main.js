@@ -46,7 +46,7 @@ Page({
         console.log(that.data.longitude + "," + that.data.latitude);
       },
       complete () {
-        that.getSelectLoc();
+        that.getCurrentLoc();
       }
     })
   },
@@ -57,8 +57,9 @@ Page({
       weatherHeight: wx.getMenuButtonBoundingClientRect().height,
       weatherWidth: wx.getMenuButtonBoundingClientRect().width,
     })
+    console.log(wx.getMenuButtonBoundingClientRect().right)
   },
-  getSelectLoc: function() {
+  getCurrentLoc: function() {
     var that = this; //this不可以直接在wxAPI函数内部使用
     // 调用和风天气API获取位置ID
     var loc = that.data.longitude.toString() + "," + that.data.latitude.toString();
@@ -71,6 +72,26 @@ Page({
       success: function (res) {
         console.log(res.data.location[0].name)
         that.setData({ addrid: res.data.location[0].id })
+      },
+      complete: function () {
+        if (that.data.addrid !== 0) {
+          that.getWeather();
+        }
+      }
+    });
+  },
+  getSelectLoc: function(e) {
+    var that = this; //this不可以直接在wxAPI函数内部使用
+    that.setData({ region: e.detail.value });
+    wx.request({
+      url: 'https://geoapi.qweather.net/v2/city/lookup?',
+      data: {
+        location: that.data.region[2],
+        key: 'cdf6c29c017144a49986d73463f868ca'
+      },
+      success: function (res) {
+        console.log(res.data.location[0].name);
+        that.setData({ addrid: res.data.location[0].id });
       },
       complete: function () {
         if (that.data.addrid !== 0) {

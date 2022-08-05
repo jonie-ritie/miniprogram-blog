@@ -3,8 +3,7 @@
     "pages/index/index",
     "pages/main/main",
     "pages/articles/articles",
-    "pages/archive/archive",
-    "pages/weather/weather"
+    "pages/archive/archive"
   ],
   "requiredPrivateInfos": [
     "getFuzzyLocation"

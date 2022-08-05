@@ -22,7 +22,7 @@ page {
   align-items: center;
   position: fixed;
   top: 0;
-  right: 8px;
+  right: 6px;
   width: 0;
   height: 0;
   margin-top: 16rpx;
