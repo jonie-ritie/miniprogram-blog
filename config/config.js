@@ -1,5 +1,5 @@
 //配置域名,域名只修改此处。可以配置为根域名 u.mr90.top/blog
-const DOMAIN = "blog.ritie-jonie.xyz";
+const DOMAIN = "blog.ritie-jonie.space";
 const WEBSITENAME = "Jonie & Ritie"; //网站名称
 const ZANIMAGEURL = '../../static/images/zanshang.jpg'; //微信鼓励的图片链接，用于个人小程序的赞赏
 const LOGO = "../../static/images/stitch_sleepy.png"; // 网站的logo图片
